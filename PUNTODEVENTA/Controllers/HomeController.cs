@@ -11,6 +11,12 @@ namespace PUNTODEVENTA.Controllers
         // GET: Home
         public ActionResult Index()
         {
+        
+            return View();
+        }
+
+        public ActionResult Listar()
+        {
             return View();
         }
     }
