@@ -22,9 +22,9 @@ namespace Abdiel.PuntoVenta.Service.Cliente
         }
         List<Common.Models.Interface.ICliente> Interface.ICliente.ListarClientes(Common.Models.Interface.ICliente model)
         {
-            cliente.ListaClientes(model);
-            throw new NotImplementedException();
+            return cliente.ListaClientes(model);
+
         }
-        
+
     }
 }

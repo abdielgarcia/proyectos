@@ -15,12 +15,18 @@ namespace Abdiel.PuntoVenta.Presentation.Web.Controllers
         public HomeController(IProxyCliente cliente)
         {
             this.cliente = cliente;
+           
         }
         // GET: Home
-        public ActionResult Index(Common.Models.Interface.ICliente model)
+        public ActionResult Index()
         {
-           cliente.listarClientes(model);
-            return View();
+            Common.Models.Cliente model = new Common.Models.Cliente();
+            return View(cliente.listarClientes(model));
         }
+        //public ActionResult Index(Common.Models.Interface.ICliente model)
+        //{
+        //    cliente.listarClientes(model);
+        //    return View();
+        //}
     }
 }

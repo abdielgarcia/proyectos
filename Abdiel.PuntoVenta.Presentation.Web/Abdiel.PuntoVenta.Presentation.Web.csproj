@@ -114,7 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -128,7 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="packages.config" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -142,9 +146,17 @@
     <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Abdiel.PuntoVenta.BusinessLogic\Abdiel.PuntoVenta.BusinessLogic.csproj">
+      <Project>{C7673C26-5251-4427-B749-A079949537D2}</Project>
+      <Name>Abdiel.PuntoVenta.BusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Abdiel.PuntoVenta.Common.Models.Interface\Abdiel.PuntoVenta.Common.Models.Interface.csproj">
       <Project>{0f6c3c62-7b24-4b86-83cd-9760a433689d}</Project>
       <Name>Abdiel.PuntoVenta.Common.Models.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abdiel.PuntoVenta.Common.Models\Abdiel.PuntoVenta.Common.Models.csproj">
+      <Project>{dad55ae8-3b52-4db2-961b-05487edaf2c5}</Project>
+      <Name>Abdiel.PuntoVenta.Common.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Abdiel.PuntoVenta.Proxy.Interface\Abdiel.PuntoVenta.Proxy.Interface.csproj">
       <Project>{1b7c5959-5cc0-4269-92b3-acfe7fffbe96}</Project>
@@ -153,6 +165,18 @@
     <ProjectReference Include="..\Abdiel.PuntoVenta.Proxy\Abdiel.PuntoVenta.Proxy.csproj">
       <Project>{21e8dca3-56aa-405d-9433-7411f73e2c7e}</Project>
       <Name>Abdiel.PuntoVenta.Proxy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abdiel.PuntoVenta.Service.Cliente\Abdiel.PuntoVenta.Service.Cliente.csproj">
+      <Project>{2f9d4503-ecf9-485c-93f5-e00443e08f18}</Project>
+      <Name>Abdiel.PuntoVenta.Service.Cliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abdiel.PuntoVenta.Service.Interface\Abdiel.PuntoVenta.Service.Interface.csproj">
+      <Project>{8aec0659-6eea-46e7-9398-36a167b0b1ca}</Project>
+      <Name>Abdiel.PuntoVenta.Service.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Abdiel.PuntoVentaBusinessLogic.Interface\Abdiel.PuntoVenta.BusinessLogic.Interface.csproj">
+      <Project>{23e99fd5-f880-44e3-8577-b005aed2daa1}</Project>
+      <Name>Abdiel.PuntoVenta.BusinessLogic.Interface</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

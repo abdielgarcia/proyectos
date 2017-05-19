@@ -3,7 +3,9 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using Abdiel.PuntoVenta.Proxy.Interface;
 using Abdiel.PuntoVenta.Proxy;
-
+using Abdiel.PuntoVenta.Common;
+using Abdiel.PuntoVenta.BusinessLogic;
+using Abdiel.PuntoVenta.Common.Models;
 namespace Abdiel.PuntoVenta.Presentation.Web.App_Start
 {
     /// <summary>
@@ -35,13 +37,18 @@ namespace Abdiel.PuntoVenta.Presentation.Web.App_Start
         public static void RegisterTypes(IUnityContainer container)
         {
             // NOTE: To load from web.config uncomment the line below. Make sure to add a Microsoft.Practices.Unity.Configuration to the using statements.
-           //  container.LoadConfiguration();
+
+            IUnityContainer container2 = new UnityContainer();
+         
+            container2.LoadConfiguration("myconfig");
 
             // TODO: Register your types here
-            // container.RegisterType<IProductRepository, ProductRepository
-            container.RegisterType<IProxyCliente, ProxyClienteNicaragua>();
+       
+            //container.RegisterType<IProxyCliente, ProxyClienteNicaragua>();
+            //container.RegisterType<Common.Models.Interface.ICliente, Common.Models.Cliente>();
+            //container.RegisterType<BusinessLogic.Interface.ICliente, BusinessLogic.Cliente>();
+            //container.RegisterType<Service.Interface.ICliente, Service.Cliente.Cliente>();
             
-            // container.RegisterType<IProxyCliente, ClienteCostaRica>();
         }
     }
 }
